@@ -1,0 +1,12 @@
+---
+import Layout from "../layouts/Layout.astro";
+const { opgaveBillede, tekst, opgaveNavn, opgaveInfo } = Astro.props;
+---
+
+<Layout>
+    <article class="">
+        <img src={opgaveBillede} alt={tekst} />
+        <h4>{opgaveNavn}</h4>
+        <p>{opgaveInfo}</p>
+    </article>
+</Layout>

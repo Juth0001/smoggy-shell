@@ -1,11 +1,176 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Welcome from "../components/Welcome.astro";
+import Layout from "../layouts/Layout.astro";
+import InfoCard from "../components/InfoCard.astro";
+import PortfolioCard from "../components/PortfolioCard.astro";
 ---
 
 <Layout>
-	<Welcome />
+	<header>
+		<InfoCard
+			png="iconer/email.png"
+			text="E-mail"
+			info="julialstrup19@gmail.com"
+		/>
+		<InfoCard png="iconer/Phone.png" text="Phone" info="+45 26 29 65 78" />
+		<InfoCard
+			png="iconer/Linkedin.png"
+			text="Linkedin"
+			info="https://www.linkedin.com/in/julie-alstrup-therkelsen-47525a344/"
+		/>
+		<InfoCard
+			png="iconer/study.png"
+			text="Uddannelses sted"
+			info="EK Erhvervsakademi København"
+		/>
+	</header>
+	<body>
+		<section class="name">
+			<h1>Julie Alstrup Therkelsen</h1>
+		</section>
+		<section class="frame">
+			<div class="Ansøgning">
+				<div class="OmMig">
+					<h3>Om mig</h3>
+					<p>
+						Hej, jeg hedder Julie Alstrup Therkelsen, og jeg er
+						multimediedesignerstuderende med en stor passion for
+						digitalt design og front-end udvikling. Jeg elsker at
+						kombinere kreativitet og teknologi for at skabe
+						brugervenlige og visuelt tiltalende weboplevelser.
+					</p>
+				</div>
+				<div class="Erfaring">
+					<h3>Erfaring</h3>
+					<p>
+						Jeg har erfaring med Figma og Adobe-programmer til
+						designarbejde, og har arbejdet med GitHub, Netlify og
+						Visual Studio Code, hvor jeg har kodet projekter i
+						Astro. Dette har givet mig praktisk erfaring med at
+						omsætte visuelle idéer til funktionelle digitale
+						løsninger.
+					</p>
+				</div>
+				<div class="Mål">
+					<h3>Mål</h3>
+					<p>
+						Mit mål med praktikken er at udvikle mine evner inden
+						for webdesign, især den visuelle del, brugeroplevelse og
+						branding, samt grafik og multimedia – men med et stærkt
+						fokus på front-end udvikling, hvor jeg kan kombinere
+						design og kodning og skabe interaktive løsninger, der
+						engagerer brugerne.
+					</p>
+				</div>
+				<div class="Tilgang">
+					<h3>Tilgang</h3>
+					<p>
+						Jeg arbejder struktureret, kreativt og elsker at finde
+						løsninger på udfordringer, både tekniske og kreative, og
+						jeg ser frem til at bidrage til spændende digitale
+						projekter hos en virksomhed, hvor jeg kan lære og
+						udvikle mine færdigheder yderligere.
+					</p>
+				</div>
+			</div>
+
+			<div class="Portfolie"></div>
+		</section>
+	</body>
+	<footer>
+		<InfoCard
+			png="iconer/email.png"
+			text="E-mail"
+			info="julialstrup19@gmail.com"
+		/>
+		<InfoCard png="iconer/Phone.png" text="Phone" info="+45 26 29 65 78" />
+		<InfoCard
+			png="iconer/Linkedin.png"
+			text="Linkedin"
+			info="https://www.linkedin.com/in/julie-alstrup-therkelsen-47525a344/"
+		/>
+		<InfoCard
+			png="iconer/study.png"
+			text="Uddannelses sted"
+			info="EK Erhvervsakademi København"
+		/>
+	</footer>
+	<style>
+		header {
+			display: flex;
+			flex-direction: row;
+			align-items: flex-end;
+			justify-content: space-between;
+			padding: 2%;
+		}
+		.name {
+			display: flex;
+			justify-content: center;
+			align-items: flex-end;
+			position: relative;
+			height: 3vh;
+		}
+
+		.name h1 {
+			font-size: 6vh;
+			font-weight: 700;
+			color: #ca6c38;
+			margin: 0;
+			margin-bottom: -5vh;
+		}
+		.frame {
+			background-color: #faf2e2;
+			height: auto;
+			width: 90%;
+			align-self: center;
+			justify-self: center;
+			margin-right: 5%;
+			margin-left: 5%;
+		}
+		.Ansøgning {
+			display: grid;
+			grid-template-columns: 2fr 2fr;
+			grid-template-rows: auto;
+		}
+
+		.frame div {
+			padding-right: 5vh;
+			padding-left: 5vh;
+			font-weight: 250;
+			/*border-top-style: solid;
+			border-bottom-style: solid;
+			border-color: #ca6c38;*/
+		}
+		div h3 {
+			border-top-style: solid;
+			border-color: #ca6c38;
+			padding: 1rem;
+		}
+		div p {
+			border-bottom-style: solid;
+			border-color: #ca6c38;
+			padding-bottom: 1rem;
+		}
+		.OmMig {
+			padding-top: 5vh;
+			grid-column: 1/2;
+		}
+		.Erfaring {
+			grid-column: 1/2;
+		}
+		.Mål {
+			grid-column: 2/3;
+		}
+		.Tilgang {
+			grid-column: 1/2;
+		}
+
+		footer {
+			display: flex;
+			flex-direction: row;
+			align-items: flex-end;
+			justify-content: space-between;
+			padding: 2%;
+		}
+	</style>
 </Layout>

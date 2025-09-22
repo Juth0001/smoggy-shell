@@ -1,0 +1,38 @@
+---
+import Layout from "../layouts/Layout.astro";
+const { png, tekst, info } = Astro.props;
+---
+
+<Layout>
+    <article class="info">
+        <img src={png} alt={tekst} />
+        <p>{info}</p>
+    </article>
+</Layout>
+<style>
+    .info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: auto;
+        width: 15%;
+        padding-top: 2%;
+        padding-right: 2%;
+        padding-left: 2%;
+        padding-bottom: 5%;
+        border-top-style: solid;
+        border-bottom-style: solid;
+        border-color: #ca6c38;
+    }
+
+    .info p {
+        font-size: x-small;
+        text-align: center;
+        max-height: 5px;
+    }
+    .info img {
+        max-width: 30px;
+        height: auto;
+        object-fit: cover;
+    }
+</style>
