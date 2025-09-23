@@ -1,12 +1,51 @@
 ---
 import Layout from "../layouts/Layout.astro";
-const { opgaveBillede, tekst, opgaveNavn, opgaveInfo } = Astro.props;
+const { link, img, tekst, opgaveNavn, opgaveInfo } = Astro.props;
 ---
 
 <Layout>
-    <article class="">
-        <img src={opgaveBillede} alt={tekst} />
-        <h4>{opgaveNavn}</h4>
-        <p>{opgaveInfo}</p>
+    <article class="portfolie">
+        <a href={link} target="_blank">
+            <img src={img} alt={tekst} />
+            <h4>{opgaveNavn}</h4>
+            <p>{opgaveInfo}</p>
+        </a>
     </article>
 </Layout>
+<style>
+    .portfolie {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: auto;
+        width: 25%;
+        padding-top: 2%;
+        padding-right: 2%;
+        padding-left: 2%;
+        padding-bottom: 5%;
+        border-top-style: solid;
+        border-bottom-style: solid;
+        border-color: #ca6c38;
+    }
+    .portfolie h4 {
+        text-align: center;
+        max-height: 5px;
+    }
+    .portfolie p {
+        font-size: x-small;
+        text-align: center;
+        max-height: 5px;
+    }
+    .portfolie img {
+        max-width: auto;
+        height: auto;
+        object-fit: cover;
+        border-radius: 10%;
+    }
+    a {
+        color: #ca6c38;
+    }
+    .portfolie:hover {
+        transform: scale(1.05);
+    }
+</style>

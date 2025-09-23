@@ -1,35 +1,42 @@
 ---
-import Welcome from "../components/Welcome.astro";
+//import Welcome from "../components/Welcome.astro";
 import Layout from "../layouts/Layout.astro";
 import InfoCard from "../components/InfoCard.astro";
 import PortfolioCard from "../components/PortfolioCard.astro";
 ---
 
 <Layout>
-	<header>
-		<InfoCard
-			png="iconer/email.png"
-			text="E-mail"
-			info="julialstrup19@gmail.com"
-		/>
-		<InfoCard png="iconer/Phone.png" text="Phone" info="+45 26 29 65 78" />
-		<InfoCard
-			png="iconer/Linkedin.png"
-			text="Linkedin"
-			info="https://www.linkedin.com/in/julie-alstrup-therkelsen-47525a344/"
-		/>
-		<InfoCard
-			png="iconer/study.png"
-			text="Uddannelses sted"
-			info="EK Erhvervsakademi København"
-		/>
+	<header class="header">
+		<section class="wrapper">
+			<InfoCard
+				png="iconer/email.png"
+				text="E-mail"
+				info="julialstrup19@gmail.com"
+			/>
+			<InfoCard png="iconer/Phone.png" text="Phone" info="+4526296578" />
+			<InfoCard
+				png="iconer/Linkedin.png"
+				text="Linkedin"
+				info="https://www.linkedin.com/in/julie-alstrup-therkelsen-47525a344/"
+			/>
+			<InfoCard
+				png="iconer/study.png"
+				text="Uddannelses sted"
+				info="EK Erhvervsakademi København"
+			/>
+		</section>
 	</header>
+
 	<body>
 		<section class="name">
 			<h1>Julie Alstrup Therkelsen</h1>
 		</section>
+
 		<section class="frame">
 			<div class="Ansøgning">
+				<div class="portræt">
+					<img src="/portrætbillede/dummi_billede.png" alt="" />
+				</div>
 				<div class="OmMig">
 					<h3>Om mig</h3>
 					<p>
@@ -74,34 +81,397 @@ import PortfolioCard from "../components/PortfolioCard.astro";
 				</div>
 			</div>
 
-			<div class="Portfolie"></div>
+			<div class="Portfolie">
+				<h1>Portfolio</h1>
+
+				<h3>1. Semester</h3>
+
+				<div class="PortCards">
+					<PortfolioCard
+						link="https://ornate-zuccutto-e8ca03.netlify.app/"
+						img="/portfolio-img/MealPrep.png"
+						tekst="Mealprep Site"
+						opgaveNavn="Meal-prep site"
+						opgaveInfo=""
+					/>
+					<PortfolioCard
+						link="https://venerable-parfait-0f27ae.netlify.app/"
+						img="/portfolio-img/PassionSite.png"
+						tekst="Passion Site"
+						opgaveNavn="Passion Site"
+						opgaveInfo=""
+					/>
+					<PortfolioCard
+						link="https://gleaming-rabanadas-c4e293.netlify.app/spil"
+						img="/portfolio-img/FruitFall.png"
+						tekst="Animation Site"
+						opgaveNavn="Animation Game"
+						opgaveInfo=""
+					/>
+				</div>
+
+				<h3>2. Semester</h3>
+
+				<div class="PortCards">
+					<PortfolioCard
+						link="https://cheery-arithmetic-508485.netlify.app/"
+						img="/portfolio-img/WeshelterSite.png"
+						tekst="We Shelter Site"
+						opgaveNavn="WeShelter Site"
+						opgaveInfo=""
+					/>
+					<PortfolioCard
+						link="https://peaceful-frangollo-8420ec.netlify.app/"
+						img="/portfolio-img/PleasantSite.png"
+						tekst="Pleasant Site"
+						opgaveNavn="Pleasant Site"
+						opgaveInfo=""
+					/>
+					<PortfolioCard
+						link="https://team8eksamenkea2025reclaimactive.netlify.app/"
+						img="/portfolio-img/ReclaimSite.png"
+						tekst="Reclaim Active Site"
+						opgaveNavn="Reclaim Active"
+						opgaveInfo=""
+					/>
+				</div>
+
+				<h3>3. Semester</h3>
+
+				<div class="PortCards">
+					<PortfolioCard
+						link="https://radiant-florentine-7c595d.netlify.app/"
+						img="/portfolio-img/todoapp.png"
+						tekst="To Do App"
+						opgaveNavn="To Do App"
+						opgaveInfo=""
+					/>
+					<PortfolioCard
+						link="https://golden-blancmange-ba8485.netlify.app/"
+						img="/portfolio-img/ThemeSwitcher.png"
+						tekst="Theme Switcher"
+						opgaveNavn="Theme Switcher"
+						opgaveInfo=""
+					/>
+					<PortfolioCard
+						link="https://exquisite-platypus-602513.netlify.app/"
+						img="/portfolio-img/languageSwitcher.png"
+						tekst="Language Switcher"
+						opgaveNavn="Language Switcher"
+						opgaveInfo=""
+					/>
+					<PortfolioCard
+						link="https://admirable-churros-0e9398.netlify.app/"
+						img="/portfolio-img/filter.png"
+						tekst="Filter"
+						opgaveNavn="Filter"
+						opgaveInfo=""
+					/>
+				</div>
+			</div>
+
+			<div class="Portfolie_mobile">
+				<h1>Portfolio</h1>
+				<div class="dropdown">
+					<button class="dropdown-toggle">
+						<h3>1. Semester</h3>
+						<span class="arrow">▼</span>
+					</button>
+					<div class="dropdown-content">
+						<PortfolioCard
+							link="https://ornate-zuccutto-e8ca03.netlify.app/"
+							img="/portfolio-img/MealPrep.png"
+							tekst="Mealprep Site"
+							opgaveNavn="Meal-prep site"
+							opgaveInfo=""
+						/>
+						<PortfolioCard
+							link="https://venerable-parfait-0f27ae.netlify.app/"
+							img="/portfolio-img/PassionSite.png"
+							tekst="Passion Site"
+							opgaveNavn="Passion Site"
+							opgaveInfo=""
+						/>
+						<PortfolioCard
+							link="https://gleaming-rabanadas-c4e293.netlify.app/spil"
+							img="/portfolio-img/FruitFall.png"
+							tekst="Animation Site"
+							opgaveNavn="Animation Game"
+							opgaveInfo=""
+						/>
+					</div>
+				</div>
+			</div>
+
+			<div class="Portfolie_mobile">
+				<div class="dropdown">
+					<button class="dropdown-toggle">
+						<h3>2. Semester</h3>
+						<span class="arrow">▼</span>
+					</button>
+					<div class="dropdown-content">
+						<PortfolioCard
+							link="https://cheery-arithmetic-508485.netlify.app/"
+							img="/portfolio-img/WeshelterSite.png"
+							tekst="We Shelter Site"
+							opgaveNavn="WeShelter Site"
+							opgaveInfo=""
+						/>
+						<PortfolioCard
+							link="https://peaceful-frangollo-8420ec.netlify.app/"
+							img="/portfolio-img/PleasantSite.png"
+							tekst="Pleasant Site"
+							opgaveNavn="Pleasant Site"
+							opgaveInfo=""
+						/>
+						<PortfolioCard
+							link="https://team8eksamenkea2025reclaimactive.netlify.app/"
+							img="/portfolio-img/ReclaimSite.png"
+							tekst="Reclaim Active Site"
+							opgaveNavn="Reclaim Active"
+							opgaveInfo=""
+						/>
+					</div>
+				</div>
+			</div>
+
+			<div class="Portfolie_mobile">
+				<div class="dropdown">
+					<button class="dropdown-toggle">
+						<h3>3. Semester</h3>
+						<span class="arrow">▼</span>
+					</button>
+					<div class="dropdown-content">
+						<PortfolioCard
+							link="https://radiant-florentine-7c595d.netlify.app/"
+							img="/portfolio-img/todoapp.png"
+							tekst="To Do App"
+							opgaveNavn="To Do App"
+							opgaveInfo=""
+						/>
+						<PortfolioCard
+							link="https://golden-blancmange-ba8485.netlify.app/"
+							img="/portfolio-img/ThemeSwitcher.png"
+							tekst="Theme Switcher"
+							opgaveNavn="Theme Switcher"
+							opgaveInfo=""
+						/>
+						<PortfolioCard
+							link="https://exquisite-platypus-602513.netlify.app/"
+							img="/portfolio-img/languageSwitcher.png"
+							tekst="Language Switcher"
+							opgaveNavn="Language Switcher"
+							opgaveInfo=""
+						/>
+						<PortfolioCard
+							link="https://admirable-churros-0e9398.netlify.app/"
+							img="/portfolio-img/filter.png"
+							tekst="Filter"
+							opgaveNavn="Filter"
+							opgaveInfo=""
+						/>
+					</div>
+				</div>
+			</div>
 		</section>
 	</body>
-	<footer>
-		<InfoCard
-			png="iconer/email.png"
-			text="E-mail"
-			info="julialstrup19@gmail.com"
-		/>
-		<InfoCard png="iconer/Phone.png" text="Phone" info="+45 26 29 65 78" />
-		<InfoCard
-			png="iconer/Linkedin.png"
-			text="Linkedin"
-			info="https://www.linkedin.com/in/julie-alstrup-therkelsen-47525a344/"
-		/>
-		<InfoCard
-			png="iconer/study.png"
-			text="Uddannelses sted"
-			info="EK Erhvervsakademi København"
-		/>
+	<footer class="header">
+		<header class="wrapper">
+			<InfoCard
+				png="iconer/email.png"
+				text="E-mail"
+				info="julialstrup19@gmail.com"
+			/>
+			<InfoCard png="iconer/Phone.png" text="Phone" info="+4526296578" />
+			<InfoCard
+				png="iconer/Linkedin.png"
+				text="Linkedin"
+				info="https://www.linkedin.com/in/julie-alstrup-therkelsen-47525a344/"
+			/>
+			<InfoCard
+				png="iconer/study.png"
+				text="Uddannelses sted"
+				info="EK Erhvervsakademi København"
+			/>
+		</header>
 	</footer>
-	<style>
-		header {
+</Layout>
+<script is:inline>
+	document.addEventListener("DOMContentLoaded", () => {
+		document.querySelectorAll(".dropdown-toggle").forEach((btn) => {
+			btn.addEventListener("click", () => {
+				btn.parentElement.classList.toggle("open");
+			});
+		});
+	});
+</script>
+<style>
+	@media (min-width: 390px) {
+		.wrapper {
 			display: flex;
-			flex-direction: row;
+			flex-wrap: nowrap;
 			align-items: flex-end;
 			justify-content: space-between;
+			margin: 10%;
+
 			padding: 2%;
+			width: 100%;
+			height: 100px;
+			gap: 7rem;
+			scroll-snap-align: start;
+			transition: transform 0.3s ease;
+		}
+		.header {
+			overflow-x: auto;
+			-webkit-overflow-scrolling: touch;
+			scroll-padding: 1rem;
+			margin: 7%;
+		}
+
+		.name {
+			display: flex;
+			justify-content: center;
+			align-items: flex-end;
+			position: relative;
+			height: 3vh;
+		}
+		.name h1 {
+			font-size: 3.5vh;
+			font-weight: 700;
+			color: #ca6c38;
+			margin: 0;
+			margin-bottom: -2vh;
+		}
+		.frame {
+			background-color: #faf2e2;
+			height: auto;
+			width: 90%;
+			margin: 0;
+			justify-self: center;
+			overflow: hidden;
+		}
+		.frame div {
+			margin-right: 3vh;
+			margin-left: 3vh;
+			font-weight: 250;
+			justify-self: center;
+			align-self: center;
+		}
+		.portræt {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin: 2rem auto;
+			width: auto;
+		}
+		.portræt img {
+			max-width: 300px;
+			width: 100%;
+			height: auto;
+			margin: 0;
+		}
+		div h3 {
+			border-top-style: solid;
+			border-color: #ca6c38;
+			padding: 1rem;
+			padding-right: 2vh;
+			padding-left: 2vh;
+		}
+		div p {
+			border-bottom-style: solid;
+			border-color: #ca6c38;
+			padding-bottom: 1rem;
+			padding-right: 2vh;
+			padding-left: 2vh;
+		}
+
+		.Portfolie {
+			display: none;
+		}
+
+		.Portfolie_mobile {
+			margin-bottom: 2rem;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		/* Dropdown container */
+		.Portfolie_mobile h1 {
+			font-size: 6vh;
+			font-weight: 700;
+			justify-self: center;
+			color: #ca6c38;
+			margin: 0;
+			margin-top: 3vh;
+			margin-bottom: 1vh;
+		}
+		.dropdown {
+			width: 100%;
+			margin-top: 1rem;
+			overflow: hidden;
+			align-items: center;
+			justify-items: center;
+		}
+
+		/* Knap med overskrift og pil */
+		.dropdown-toggle {
+			width: 300px;
+			padding: 0rem;
+			background: none;
+			border: none;
+			font-size: 1.2rem;
+			font-weight: bold;
+			text-align: left;
+			cursor: pointer;
+			position: relative;
+		}
+
+		.dropdown-toggle .arrow {
+			position: absolute;
+			top: 40%;
+			right: 1rem;
+			transition: transform 0.3s ease;
+		}
+
+		.dropdown.open .dropdown-toggle .arrow {
+			transform: rotate(180deg);
+		}
+
+		/* Indhold (skjult som standard) */
+		.dropdown-content {
+			max-height: 0;
+			overflow: hidden;
+			transition: max-height 0.4s ease;
+
+			gap: 2rem;
+
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.dropdown.open .dropdown-content {
+			max-height: 3000px;
+			padding: 1rem;
+		}
+	}
+	@media (min-width: 1024px) {
+		.Portfolie_mobile {
+			display: none;
+		}
+
+		.header,
+		.wrapper {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-self: center;
+			justify-content: space-between;
+			min-height: 20px;
+			width: 100%;
+			margin-top: 1rem;
+			margin-bottom: 2rem;
 		}
 		.name {
 			display: flex;
@@ -116,16 +486,15 @@ import PortfolioCard from "../components/PortfolioCard.astro";
 			font-weight: 700;
 			color: #ca6c38;
 			margin: 0;
-			margin-bottom: -5vh;
+			margin-bottom: -4vh;
 		}
 		.frame {
 			background-color: #faf2e2;
 			height: auto;
 			width: 90%;
-			align-self: center;
+			align-items: center;
 			justify-self: center;
-			margin-right: 5%;
-			margin-left: 5%;
+			margin: 0 auto;
 		}
 		.Ansøgning {
 			display: grid;
@@ -137,9 +506,6 @@ import PortfolioCard from "../components/PortfolioCard.astro";
 			padding-right: 5vh;
 			padding-left: 5vh;
 			font-weight: 250;
-			/*border-top-style: solid;
-			border-bottom-style: solid;
-			border-color: #ca6c38;*/
 		}
 		div h3 {
 			border-top-style: solid;
@@ -151,20 +517,59 @@ import PortfolioCard from "../components/PortfolioCard.astro";
 			border-color: #ca6c38;
 			padding-bottom: 1rem;
 		}
+		.portræt {
+			padding: 5vh;
+			grid-column: 2/3;
+			grid-row: 1/3;
+			justify-self: center;
+		}
 		.OmMig {
-			padding-top: 5vh;
+			padding: 5vh;
 			grid-column: 1/2;
+			grid-row: 1/2;
+			height: auto;
 		}
 		.Erfaring {
 			grid-column: 1/2;
+			grid-row: 2/3;
 		}
 		.Mål {
 			grid-column: 2/3;
+			grid-row: 3/4;
 		}
 		.Tilgang {
 			grid-column: 1/2;
+			grid-row: 3/4;
 		}
-
+		.Portfolie {
+			margin: 0 auto; /* Centrerer containeren */
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		.Portfolie h1 {
+			font-size: 6vh;
+			font-weight: 700;
+			justify-self: center;
+			color: #ca6c38;
+			margin: 0;
+			margin-top: 3vh;
+			margin-bottom: 1vh;
+		}
+		.Portfolie h3 {
+			align-self: flex-start;
+			margin: 2rem;
+			border-top: none;
+		}
+		.PortCards {
+			display: flex;
+			flex-direction: row;
+			justify-content: center; /* centrerer kortene horisontalt */
+			align-items: flex-start; /* justerer toppen */
+			gap: 2rem; /* afstand mellem kortene */
+			flex-wrap: wrap;
+			width: 100%;
+		}
 		footer {
 			display: flex;
 			flex-direction: row;
@@ -172,5 +577,5 @@ import PortfolioCard from "../components/PortfolioCard.astro";
 			justify-content: space-between;
 			padding: 2%;
 		}
-	</style>
-</Layout>
+	}
+</style>
